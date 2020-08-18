@@ -1,0 +1,5 @@
+name: BungeeHelp
+author: alex3025
+version: ${project.version}
+main: bungeehelp.Main
+description: Write custom help messages for your bungeecord network.

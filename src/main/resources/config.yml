@@ -1,0 +1,63 @@
+# # # # # # # # # # # # # # # # # # # # # # # # #
+#                                               #
+# BungeeHelp by alex3025 | Plugin Configuration #
+#                                               #
+#             Config Version: ${project.version}             #
+#                                               #
+# # # # # # # # # # # # # # # # # # # # # # # # #
+
+# THESE COMMANDS WILL WORK IN ALL THE SERVERS (except these are in the blacklist) ALSO IF THE SERVER HAS CUSTOM ALIASES.
+# So you can put here a command that you want to use in all the servers.
+globalAliases:
+  - 'help'
+  - 'about'
+  - '?'
+
+# The "globalHelp" message is used on the servers that aren't in the "servers" section.
+globalHelp:
+  help:
+    - '&8&m+------------------------------+'
+    - '&7Example global help'
+    - '&8&m+------------------------------+'
+  cooldown: 5
+
+servers:
+  # You can have a custom help message for a specific server.
+  lobby:
+    help:
+      - '&8&m+------------------------------+'
+      - '&7Example lobby help'
+      - '&8&m+------------------------------+'
+    cooldown: 5 # Here you can set the command cooldown only for this server (in seconds).
+    aliases:
+      - 'helpme'
+
+# These servers will not affect from the plugin.
+serversBlacklist:
+  - 'survival'
+
+# Show a message if a new version is available when a player with the "bungeehelp.updatenotify" permission join the server
+# (the message will show one time per server startup)
+update-notifier: true
+
+# Customize plugin messages.
+messages:
+  # Base messages:
+  prefix: '&e&lBungeeHelp &8&l>&r '
+  update-notification: '&aNew version available!'
+  console-check-version-error: '&cCannot fetch latest version!'
+  unknown-command: '&cUnknown command!'
+  
+  # Messages without plugin prefix
+  on-cooldown: '&cYou need to wait &7%seconds%&c seconds before using the command again!' # Use %seconds% to show cooldown remaining seconds.
+  no-permissions: '&cYou don''t have permission to use this command!'
+
+  # Commands messages:
+  commands:
+    self:
+      description: '&7Shows info about the plugin.'
+    help:
+      description: '&7Shows this message.'
+    reload:
+      success: '&aSuccessfully reloaded all configuration files.'
+      description: '&7Reloads the configuration.'
